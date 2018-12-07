@@ -1,0 +1,33 @@
+@charset "utf-8";
+html,body,#app{ width: 100%; height: 100%; }
+
+.fl-left{ float: left; }    // 左浮动
+
+.fl-right { float: right; } // 右浮动
+
+.text-left { text-align: left; } // 文本左对齐
+
+.text-center{ text-align: center; } // 文本居中对齐
+
+.text-right{ text-align: right; }   // 文本右对齐
+
+.text-overflow{ overflow: hidden; text-overflow: ellipsis; @extend .text-left; white-space: nowrap; } // 文本溢出
+
+.clearfix { 
+    &:after{ display: none; content: ''; clear: both; height: 0; line-height: 0; }
+ } // 清除浮动
+
+//公共样式
+html, body, div, span, table, tbody, tr, th, td, em, img, strong, h1, h2, h3, h4, h5, h6, p, a, dl, dd, dt, ol, ul, li, form, label, input, textarea, button, b, i, u{ margin: 0; padding: 0; border: none; list-style: none; outline: none; }
+
+h1, h2, h3, h4, h5, h6, b{ font-weight: 400; }
+
+a, img{ text-decoration: none; border: 0; }
+
+body{ font-family: $global-font-family; color: $global-body-color; background: $default-background-color; font-size: $default-font-size;}
+
+// a{ color: $global-body-color; font-size: $default-font-size; text-decoration: none;
+//     &.edit{ color: $global-color-main; }
+//     &.disabled{color: $global-color-grey;cursor:not-allowed;}
+//     &.delete{color: $global-color-sub-red; }
+// }
