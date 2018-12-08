@@ -1,10 +1,10 @@
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter,BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
-const App = require('./app');
+import RoutesConfig from '../route';
 ReactDOM.render(
-    <HashRouter>
-        <Route exact path="/" component={App}/>
-    </HashRouter>
+    <BrowserRouter>
+        <RoutesConfig />
+    </BrowserRouter>
   , document.getElementById('app')
 );

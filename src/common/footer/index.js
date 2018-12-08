@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 class Footer extends Component {
     constructor(props) {
         super(props);
@@ -8,9 +8,9 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <Link to="/">资讯</Link>
-                <Link to="/">发现</Link>
-                <Link to="/">我的</Link>
+                <NavLink to="/news" activeClassName="active">资讯</NavLink>
+                <NavLink to="/discovery" activeClassName="active">发现</NavLink>
+                <NavLink to="/personal" activeClassName="active">我的</NavLink>
             </div>
         )
     }

@@ -1,11 +1,13 @@
 .footer{
     position: fixed;
+    z-index: 100;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 90px;
+    background: #ffffff;
     border-top: 1px solid #fc3;
     font-size: 32px;
     a{
@@ -13,6 +15,9 @@
         text-decoration: none;
         &:hover{
             text-decoration: none;
+        }
+        &.active{
+          color: orange;
         }
     }
 }

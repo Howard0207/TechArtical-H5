@@ -31,3 +31,22 @@ body{ font-family: $global-font-family; color: $global-body-color; background: $
 //     &.disabled{color: $global-color-grey;cursor:not-allowed;}
 //     &.delete{color: $global-color-sub-red; }
 // }
+
+.fade-enter {
+  width: 100%;
+  height: calc(100% - 90px);
+  position: absolute;
+  top: -100%;
+}
+.fade-enter-active {
+    top: 90px;
+    transition: all 500ms ease-in-out;
+}
+// .fade-exit {
+//     position: absolute;
+//     top: 0;
+// }
+// .fade-exit-active {
+//     top: 100%;
+//     transition: top 5000ms ease-in;
+// }

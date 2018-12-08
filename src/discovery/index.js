@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Home extends Component {
+class Discovery extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,15 +13,18 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="personal">
-                这是home页面
+            <div className="discovery">
+                <div className="sec-one">我喜欢发现新事物</div>
+                <div className="sec-two">二段</div>
+                <div className="sec-three">三段</div>
+                <div className="sec-four">三段</div>
           </div>
         )
     }
 }
 
-Home.propTypes = {
+Discovery.propTypes = {
     name: PropTypes.string
 }
 
-module.exports = Home;
+module.exports = Discovery;
