@@ -26,7 +26,7 @@ module.exports = {
     plugins: [ extractSass ],
     module: {
         rules: [
-            { test: /\.scss$/, use: extractSass.extract({ use: [{ loader: 'css-loader' }, { loader: 'px-to-rem-loader', options: ConfigUtils.getCssRemOption() }, { loader: 'sass-loader' }], fallback: 'style-loader' }) },
+            { test: /\.scss$/, use: extractSass.extract({ use: [{ loader: 'css-loader', options: {url: false } }, { loader: 'px-to-rem-loader', options: ConfigUtils.getCssRemOption() }, { loader: 'sass-loader' }], fallback: 'style-loader' }) },
         ]
     }
 }

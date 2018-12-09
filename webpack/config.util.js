@@ -34,7 +34,7 @@ module.exports = {
     getCommonJSPath: function(isDev){
         // const fileList = ["../libs/compatible/console-polyfill.js","../libs/compatible/es5-shim.min.js","../libs/compatible/es5-sham.min.js"]
         const fileList = [];
-        return fileList.concat(isDev ? ["./assets/libs/utils.js", "./assets/libs/ajax.js","./assets/libs/flexible.js"] :
+        return fileList.concat(isDev ? ["/assets/libs/utils.js", "/assets/libs/ajax.js","/assets/libs/flexible.js"] :
             [ "../assets/libs/utils.js", "../assets/libs/ajax.min.js"]
         )
     },
@@ -42,7 +42,7 @@ module.exports = {
     getCommonCssPath: function(isDev){
         // const fileList = ["../libs/compatible/console-polyfill.js","../libs/compatible/es5-shim.min.js","../libs/compatible/es5-sham.min.js"]
         const fileList = [];
-        return fileList.concat(isDev ?['../assets/fonts/iconfont.css','../assets/css/config.css','../assets/css/components.css','../assets/css/pages.css'] : 
+        return fileList.concat(isDev ?['/assets/fonts/iconfont.css','/assets/css/config.css','/assets/css/components.css','/assets/css/pages.css'] : 
             ['../assets/fonts/iconfont.css','../assets/css/config.min.css','../assets/css/components.min.css','../assets/css/pages.min.css']
         )
     },

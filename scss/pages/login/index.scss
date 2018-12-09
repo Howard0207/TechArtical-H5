@@ -1,0 +1,33 @@
+.login{
+    background: url('../images/login-bg.jpg');
+    background-size: cover;
+    height: 100%;
+    .login-container{
+        position: relative;
+        top: 50%;
+        transform: translateY(-60%);
+        transform-origin: center;
+    }
+    .login-header{
+        margin-bottom: 100px;
+        padding: 0 60px;
+        font-size: 38px;
+        color: $default-white;
+    }
+    .login-content{
+        padding: 0 60px;
+        .account-wrapper{
+            margin-bottom: 50px;
+            height: 180px;
+            border-radius: 5px;
+            overflow: hidden;
+            .login-form-input{
+                border-radius: 0;
+                background: rgba(255,255,255,0.3);
+                &:first-child{
+                    border-bottom: 1px solid $default-white;
+                }
+            }
+        }
+    }
+}

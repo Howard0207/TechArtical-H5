@@ -1,6 +1,8 @@
-@import './common/header.scss';
-@import './common/footer.scss';
-@import './app/index.scss';
+@import '../config/color.scss';
+@import './common/header';
+@import './common/footer';
+@import './app/index';
 @import './discovery/index';
 @import './news/index';
 @import './personal/index';
+@import './login/index';

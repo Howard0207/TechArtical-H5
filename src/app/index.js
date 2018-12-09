@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, IndexRoute } from 'react-router-dom';
 import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Header from '../common/header';
@@ -26,6 +26,7 @@ class App extends Component {
                 <TransitionGroup className="app-content">
                     <CSSTransition key={location.key} classNames="fade" timeout={500}>
                         <Switch location={location}>
+                            <Route exact path="/" component={News}></Route>
                             <Route exact path="/news" component={News}></Route>
                             <Route exact path="/discovery" component={Discovery}></Route>
                             <Route exact path="/personal" component={Personal}></Route>

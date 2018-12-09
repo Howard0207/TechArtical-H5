@@ -21,7 +21,11 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 // 清理文件夹配置
-const cleanWebpackPlugin = new CleanWebpackPlugin(['dist']);
+const cleanWebpackPlugin = new CleanWebpackPlugin(['dist'],{
+    root: path.resolve(__dirname,'..'),       　　　　　　　　　　//根目录
+    verbose: true,        　　　　　　　　　　//开启在控制台输出信息
+    dry: false        　　　　　　　　　　//启用删除文件
+});
 
 // 静态资源配置
 const copyWebpackPlugin = new CopyWebpackPlugin([
@@ -33,7 +37,11 @@ const copyWebpackPlugin = new CopyWebpackPlugin([
 ]);
 module.exports = {
     mode: 'development',
-    
+    output: {
+        filename: '[name].js',
+        path: path.join(__dirname,'../dist/'),
+        publicPath: '/'
+    },
     devServer: {
         historyApiFallback: true,
         contentBase: "../dist",
