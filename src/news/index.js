@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import PropTypes from 'prop-types';
+import Axios from 'axios';
 
 class News extends Component{
     constructor(props) {
@@ -9,6 +10,19 @@ class News extends Component{
             loading: false,
             buttonText: '警告信息'
         }
+    }
+
+    componentDidMount = () => {
+        axios.post('/test/user/getTestData', {
+            firstName: 'Fred',
+            lastName: 'Flintstone'
+          })
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
     render() {

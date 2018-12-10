@@ -34,7 +34,7 @@ module.exports = {
     getCommonJSPath: function(isDev){
         // const fileList = ["../libs/compatible/console-polyfill.js","../libs/compatible/es5-shim.min.js","../libs/compatible/es5-sham.min.js"]
         const fileList = [];
-        return fileList.concat(isDev ? ["/assets/libs/utils.js", "/assets/libs/ajax.js","/assets/libs/flexible.js"] :
+        return fileList.concat(isDev ? ["/assets/libs/flexible.js","/assets/libs/axios.js","/assets/libs/utils.js", "/assets/libs/ajax.js",] :
             [ "../assets/libs/utils.js", "../assets/libs/ajax.min.js"]
         )
     },

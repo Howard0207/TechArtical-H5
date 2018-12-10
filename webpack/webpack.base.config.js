@@ -62,6 +62,11 @@ module.exports = {
                 target: 'http://localhost:3000/',
                 secure: false,
                 changeOrigin: true
+            },
+            '/club': {
+                target: 'http://99.6.118.95:11004/api',
+                secure: false,
+                changeOrigin: true
             }
         }
 
