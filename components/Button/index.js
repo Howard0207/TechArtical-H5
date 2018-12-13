@@ -1,24 +1,23 @@
 import PropTypes from 'prop-types';
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import Tap from '../Tap';
 class Button extends Component {
-    onClick(e){
-        if (!this.props.loading) {
-            this.props.onClick && this.props.onClick(e);
-        }
-    }
 
     render() {
         return (
-            <button className={classnames('el-button', this.props.type && `el-button--${this.props.type}`, this.props.size && `el-button--${this.props.size}`, {
-                'is-disabled': this.props.disabled,
-                'is-loading': this.props.loading,
-                'is-plain': this.props.plain
-            })} disabled={this.props.disabled} type={this.props.nativeType} onClick={this.onClick.bind(this)}>
-                { this.props.loading && <i className="iconfont icon-sync" /> }
-                { this.props.icon && !this.props.loading && <i className={`iconfont icon-${this.props.icon}`} /> }
-                <span>{this.props.children}</span>
-            </button>
+            <Tap onTap={this.props.onTap} onLongTap={this.props.onLongTap} onClick={this.props.onClick}>
+                <button className={classnames('el-button', this.props.type && `el-button--${this.props.type}`, this.props.size && `el-button--${this.props.size}`, {
+                    'is-disabled': this.props.disabled,
+                    'is-loading': this.props.loading,
+                    'is-plain': this.props.plain
+                })}
+                disabled={this.props.disabled} type={this.props.nativeType}>
+                    {this.props.loading && <i className="iconfont icon-sync" />}
+                    {this.props.icon && !this.props.loading && <i className={`iconfont icon-${this.props.icon}`} />}
+                    <span>{this.props.value}</span>
+                </button>
+            </Tap>
         )
     }
 }

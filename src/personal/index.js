@@ -1,7 +1,8 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-class Personal extends Component{
+import Button from '../../components/Button';
+import Direction from '../../components/Direction';
+class Personal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -11,11 +12,31 @@ class Personal extends Component{
         }
     }
 
+    handleTap = () => {
+        console.log('handleTap')
+    }
+
+    handleLongTap = () => {
+        console.log('handleLongTap')
+    }
+
+    click = () => {
+        console.log('click');
+    }
+
     render() {
         return (
-          <div className="personal">
-              个人中心
-          </div>
+            <div className="personal">
+                个人中心
+                <Button value="按钮" onTap={this.handleTap} onLongTap={this.handleLongTap} />
+                <Direction>
+                    地v从
+                    地v从
+                    地v从
+                    地v从
+                    地v从
+                </Direction>
+            </div>
         )
     }
 }
