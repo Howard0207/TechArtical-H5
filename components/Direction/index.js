@@ -9,12 +9,13 @@ class Direction extends Component {
 
     touchStart = (e) => {
         console.log(e);
+        console.log(e.touches)
+
         console.log('touchStart： '+e.pageX)
     }
 
     touchMove = (e) => {
-        console.log(e);
-        console.log('touchMove： '+e.originalEvent.targetTouches[0].pageX)
+        console.log('touchMove： '+e.touches[0].pageX);
     }
 
     touchEnd = (e) => {
