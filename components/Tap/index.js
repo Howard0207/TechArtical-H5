@@ -38,9 +38,9 @@ class Tap extends Component {
 
     render() {
         return (
-            <a href="javascript: void(0)" className="tap" onTouchStart={this.handleTouchStart} onTouchMove={this.handleTouchMove} onTouchEnd={this.handleTouchEnd} onClick={this.handleClick}>
+            <div href="javascript: void(0)" className="tap" onTouchStart={this.handleTouchStart} onTouchMove={this.handleTouchMove} onTouchEnd={this.handleTouchEnd} onClick={this.handleClick}>
                 {this.props.children}
-            </a>
+            </div>
         )
     }
 }

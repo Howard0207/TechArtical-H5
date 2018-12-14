@@ -19,7 +19,7 @@ class App extends Component {
 
     render() {
         const location = this.props.location;
-        console.log(this.props.location);
+        // console.log(this.props.location);
         return (
             <div className="app-wrapper">
                 <Header />
